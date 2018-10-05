@@ -1,0 +1,40 @@
+.signin {
+  background-image: linear-gradient(to right, #f2f2f2, #9ac0d6);
+  height: 100%;
+  
+  &__button {
+    width: 80%;
+  }
+}
+
+.signin__header {
+  margin-bottom: 6.5rem;
+
+  &--div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+}
+
+.signin-card {
+  margin: 0 auto;
+  width: 20rem;
+  height: 25rem;
+
+  &__form-fields {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+      margin: 0.5rem;
+    }
+  }
+
+  &__icon {
+    font-size: 7rem;
+    color: #90CAF9;
+    margin-left: -5rem;
+  }
+}

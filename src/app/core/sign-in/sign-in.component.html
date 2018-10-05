@@ -1,0 +1,34 @@
+<section class="signin">
+  <header class="signin__header">
+    <div class="signin__header--div">
+      <img src="assets/images/logos/logo_web.png" alt="">
+      <!-- <h1 align=center style="color:#222; flex: 0.8">Dashboard</h1> -->
+    </div>
+  </header>
+  <mat-card class="signin-card mat-elevation-z24">
+    <form (ngSubmit)="onSignin(signinForm)" #signinForm="ngForm" ngNativeValidate>
+      <div class="signin-card__form-fields">
+        <div class="center">
+          <mat-icon class="signin-card__icon">account_circle</mat-icon>
+          <br>
+          <h2 class="clip-text">Doctor Login</h2>
+        </div>
+        <mat-form-field>
+          <input matInput placeholder="Enter user name..." name="signinEmail" type="email" ngModel required>
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Enter your password..." name="password" ngModel type="password" required>
+          <mat-icon matSuffix>vpn_key</mat-icon>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!signinForm.valid">
+          <mat-icon>done</mat-icon> &nbsp; Login
+        </button>
+      </div>
+    </form>
+  </mat-card>
+  <br>
+  <footer>
+    <p class="center"> &copy; 2018 by Imedrix Sytems. All rights reserved.</p>
+  </footer>
+</section>
