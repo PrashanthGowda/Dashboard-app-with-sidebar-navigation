@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PatientListComponent } from './patient-list/patient-list.component';
 import { LayoutComponent } from '../shared/components/layout/layout.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path: 'patient', component:  LayoutComponent, children: [
-      { path: '', redirectTo: 'patient-list', pathMatch: 'full' },
-      { path: 'patient-list', component: PatientListComponent}
+    path: 'dashboard', component:  LayoutComponent, children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: DashboardComponent}
     ]
   }
 ];
@@ -17,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PatientRoutingModule { }
+export class CoreRoutingModule { }

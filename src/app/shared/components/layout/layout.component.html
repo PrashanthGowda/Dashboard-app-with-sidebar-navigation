@@ -5,10 +5,10 @@
       <a (click)="gotoImedrix()"> <img src="assets/images/logos/logo_web_1.png" alt=""></a>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink='dashboards' style="font-size: 14px">
+      <a mat-list-item routerLink='../dashboard' style="font-size: 14px">
         <mat-icon aria-label="Side nav toggle icon">home</mat-icon>&nbsp;&nbsp;Home
       </a>
-      <a mat-list-item routerLink='../patient/patient-list' style="font-size: 14px">
+      <a mat-list-item routerLink='../patient' style="font-size: 14px">
         <mat-icon aria-label="Side nav toggle icon">list</mat-icon>&nbsp;&nbsp;Patient List
       </a>
       <!-- <a mat-list-item routerLink='search' style="font-size: 14px">
@@ -34,7 +34,7 @@
       <span class="spacer"></span>
       <div class="">
         <button mat-button [matMenuTriggerFor]="menu">
-          <mat-icon>account_circle</mat-icon>&nbsp;&nbsp;Dr. {{username}}
+          <mat-icon>account_circle</mat-icon>&nbsp;&nbsp; Dr. {{username}}
         </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item (click)="logout()">

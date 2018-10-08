@@ -1,28 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SigninAlertComponent } from '../shared/components/signin-alert/signin-alert.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../angular-material/material.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from '../app.routing-module';
+import { SharedModule } from '../shared/shared.module';
+import { CoreRoutingModule } from './core-routing.module';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    SignInComponent,
-    DashboardComponent,
-    SigninAlertComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
-  ]
+    SharedModule,
+    CoreRoutingModule
+  ],
+  exports: []
 })
 export class CoreModule { }
